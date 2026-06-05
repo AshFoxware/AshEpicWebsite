@@ -1,10 +1,57 @@
 <!doctype=HTML>
   <head>
-    <title>Welcome Home</title>
+    <title>Welcome Home!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="client.js" defer> </script>
   </head>
 <body>
-  #
+
+  <div id="NavBar"> <!-- this is the navbar-->
+    <div class="navButton">
+      <p>Home</p>
+    </div>
+    <div class="navButton">
+      <p>Portfolio</p>
+    </div>
+    <div class="navButton">
+      <p>Art</p>
+    </div>
+    <div class="navButton">
+      <p>Photos</p>
+    </div>
+    <div class="navButton">
+      <p>About</p>
+    </div>
+  </div>
+
+  <div id="Sky">
+  <div>
+    <h1> Welcome to the Fox Zone </h1>
+    <p align="center"> prepare for foxes </p>
+  </div>
+  <img id="cutefoxboy" src="resource/AshPic.png" alt="a cute puppy">
+  </div>
+
+  <div id="Ocean">
+      <svg id="wave1" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 -100 1440 250" >
+        <defs>
+          <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#3154E0; stop-opacity:1" id="gradStop1" />
+            <stop offset="100%" style="stop-color:#3154E0; stop-opacity:1" id="gradStop2" />
+          </linearGradient>
+        </defs>
+        <path class="waveBack" fill="url(#myGradient)" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
+        <path class="waveMiddle" fill="url(#myGradient)" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
+        <path class="waveFront" fill="url(#myGradient)" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
+      </svg>
+    </div>
+    <div id="coolDiagonal">
+      <div id=otherHalfOfDiagonal">
+
+      </div>
+    </div>
 
 </body>
