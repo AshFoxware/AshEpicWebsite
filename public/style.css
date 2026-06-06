@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow:hidden;
 }
 
 body {
@@ -15,31 +18,37 @@ body {
   padding:0;
   overflow-x: hidden;
   box-sizing: border-box;
+  flex-shrink: 1;
 }
 
 #NavBar {
+  position: sticky;
+  top:0;
+  width: 100%;
   display:  flex;
   flex-direction:row;
-  justify-content: center;
+  justify-content: left;
   gap:1vh;
   padding-top: 2vh;
   padding-bottom:2vh;
+  padding-left:2vh;
   background-color: #FAEFD9;
   color:white;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  flex-shrink: 1;
 }
 
 .navButton {
   display:flex;
-  width:15vh;
-  height:10vh;
+  width:10vh;
+  height:6vh;
   align-items: center;
   justify-content: center;
   background-color: #3154E0;
-  font-size: 3vh;
+  font-size: 2vh;
   border-radius: 1vh;
   overflow: hidden;
   font-family: "Inter", sans-serif;
@@ -48,32 +57,109 @@ body {
   font-style: normal;
 }
 
-#sky {
+#Sky {
   display:flex;
-  justify-content:center;
-  align-text:center;
+  justify-content:left;
+  align-text:left;
   background-color:#FFBA30;
-  height:20vh;
+  height:28vh;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 4vh;
   color:white;
+  flex-shrink: 1;
 }
 
+
+#beachBallContainer {
+  position:absolute;
+  bottom:30vh;
+  left:10vh;
+  flex-shrink: 1;
+}
+
+#beachBall {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    /* Create the 6 colourful slices */
+    background: conic-gradient(
+      #ff4b4b 0deg 60deg,
+      #ffffff 60deg 120deg,
+      #00d2fc 120deg 180deg,
+      #ffffff 180deg 240deg,
+      #ffcd00 240deg 300deg,
+      #ffffff 300deg 360deg
+    );
+
+    animation: roll 10s ease-in-out infinite;
+    flex-shrink: 1;
+  }
+
+  #beachBall::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Size and shape */
+    width: 5vh;
+    height: 5vh;
+    background-color: #ffffff;
+    border-radius: 50%;
+    flex-shrink: 1;
+
+  }
+
+  #distantBeach {
+    position:absolute;
+    right:-30vh;
+    bottom:10vh;
+    background-color: #FAEFD9;
+    border-radius:50%;
+    width:70vh;
+    height:20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    overflow:hidden;
+    flex-shrink: 1;
+  }
+
+  @keyframes roll {
+    0% {
+      /* Starts at baseline, no rotation */
+      transform: translateY(0vh) rotate(0deg);
+    }
+    50% {
+      /* Floats up 20px, rotates halfway */
+      transform: translateY(-2.5vh) rotate(180deg);
+    }
+    100% {
+      /* Drops back down, completes full rotation */
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+
+
 #cutefoxboy {
-  preserveAspectRatio;
-  width:24vh;
-  height:30vh;
+  padding-left: 10vh;
+  padding-right:5vh;
+  padding-top:5vh;
+  width:27vh;
+  height:34vh;
+  flex-shrink: 1;
 }
 
 #Ocean {
-    background-color:#FFBA30;
+    position:relative;
+    display:flex-box;
     width: 100%;
-    margin: 0;
-    display:flex;
-    align-items: bottom;
+    height:auto;
+    top:20vh;
+    bottom:0vh;
   }
 
 
@@ -119,6 +205,7 @@ body {
 #coolDiagonal {
   background-image: linear-gradient(to top, #3456DF,#3456DF);
   height:30vh;
+  top:0vh;
   width 100%;
 }
 
