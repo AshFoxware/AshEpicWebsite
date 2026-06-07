@@ -1,65 +1,88 @@
-<!doctype=HTML>
+<!DOCTYPE HTML>
+<html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Home!</title>
+    <title>Welcome to the Foxstasy zone!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="client.js" defer> </script>
   </head>
-<body>
+  <body>
+    <!-- the general structure I want for this site is, Navigation bar -> title/"sky" -> cool water animation -> fancy info show off stuffs -->
+    <div id="navBar"> <!-- Navigation bar and buttons-->
+      <a class="navButtons"> Home </a>
+      <a class="navButtons"> Photos </a>
+      <a class="navButtons"> Art </a>
+      <a class="navButtons"> Portfolio </a>
+      <a class="navButtons"> About </a>
+    </div>
+
+    <div id="skyTitle"> <!-- this is the header and photograph section near the top -->
+      <div id="skyText">
+        <p style="font-size:3vw; font-style:italic; font-weight:200; line-height:2dvw;"> welcome to </p>
+        <h1 style="font-size:5vw; font-weight:bold; line-height:4.5dvw;">Lupercalia.software</h1>
+        <p style="font-size:3vw; font-weight:350; ">My programming den is here! <br>put on your programming socks and dive in!<br> <br> </p>
+        <p style="font-size:2vw; font-weight:300;"> come find me on :
+        <div id="LinkIcons">
+          <a id="telegramente" href="https://t.me/foxbuppy" target="_blank" rel="noopener noreferrer">
+            <svg class="logos" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+            </svg>
+            <p style="font-size:3dvw"">Telegram</p>
+          </a>
+
+          <a id="github" href="https://github.com/AshFoxware" target="_blank" rel="noopener noreferrer">
+            <svg class="logos" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
+            <p style="font-size:3dvw"">Github</p>
+          </a>
+        </div>
+    </div>
+      <img id="cuteFoxBoy" src="resource/AshPic.png" alt="cutefoxboy"></img>
+    </div>
 
 
+    <div id="glass"> <!-- I have called it glass because that is what we put water in, and this is the container for the ocean-->
+      <div id="ballContainer">
+        <div id="beachBall">
+          <div id="centre"></div>
+      </div>
+    </div>
+      <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190" preserveAspectRatio="xMidYMin slice">
 
-  <div id="NavBar"> <!-- this is the navbar-->
-    <div class="navButton">
-      <p>Home</p>
-    </div>
-    <div class="navButton">
-      <p>Portfolio</p>
-    </div>
-    <div class="navButton">
-      <p>Art</p>
-    </div>
-    <div class="navButton">
-      <p>Photos</p>
-    </div>
-    <div class="navButton">
-      <p>About</p>
-    </div>
-  </div>
-
-  <div id="Sky">
-    <img id="cutefoxboy" src="resource/AshPic.png" alt="a cute puppy">
-  <div>
-    <h1 flex-shrink="0"> Welcome to the Fox Zone </h1>
-    <p align="left">  the personal site of ash, come see what im programming, or cooking, or my fursuit pics. I pawmise it'll be worth your time </p>
-  </div>
-  </div>
-  <div id="beachBallContainer">
-  <div id="beachBall">
-  </div>
-</div>
-<div id="distantBeach">
-</div>
-  <div id="Ocean">
-      <svg id="wave1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 220" >
         <defs>
-          <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#3154E0; stop-opacity:1" id="gradStop1" />
-            <stop offset="100%" style="stop-color:#3154E0; stop-opacity:1" id="gradStop2" />
+          <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#004cdb" stop-opacity="0.90" />
+            <stop offset="80%" stop-color="#004cdb" stop-opacity="1" />
+            <stop offset="100%" stop-color="#004cdb" stop-opacity="1" />
           </linearGradient>
         </defs>
-        <path class="waveBack" fill="url(#myGradient)" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
-        <path class="waveMiddle" fill="url(#myGradient)" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
-        <path class="waveFront" fill="url(#myGradient)" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
+        <path class="waveBack" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
+        <path class="waveMiddle" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
+        <path class="waveFront" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z" fill="url(#blueGradient)"></path>
       </svg>
-    </div>
-    <div id="coolDiagonal">
-      <div id=otherHalfOfDiagonal">
-
+      <div id="AboutMeShort">
+        <img id="sillyfox" src="resource/Silly.jpeg" alt="silly fox">
+        <div id="whomst">
+          <br>
+        <h2> Who can it be now? </h2>
+        <p> My name is Ash, and my fursona is Luce! (pronounced like the car) <br>
+          I am a software developer, fursuiter, and full time caffeine addict animal. <br>
+          In my spare time I enjoy programming, chess and going out to furmeets! <br> <br>If you catch me at a party or meet or con, feel free to say hi! <br> I won't bite.. Unless you want me to! </p>
+        </div>
+      </div>
+      <div id="cremeFinish">
+        <div id=finalTextBox>
+          <h2> Whats the point of this site </h2>
+          <p> mostly just a fun thing to make in my spare time <br> and to upload all my furry art, fursuit photos and videogames that I make <br> so that I can show them to people, or put it on a business card or something. </p>
+        </div>
+        <img id="eeping" src="resource/eeping.jpg"></img>
       </div>
     </div>
 
-</body>
+    <div id="feeter">
+      <p> woo you reached the end of the page </p>
+    </div>
+  </body>
+  </html>
