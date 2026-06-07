@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    flex-shrink:0;
 }
 
 hr {
@@ -19,6 +20,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@media (orientation: portrait) {
+  section {
+    min-height: 70vh;
+  }
+}
+
+
 #navBar {
   display:flex;
   background-color: #fb501f;
@@ -27,7 +35,7 @@ body {
   padding-left:2vw;
   padding-right:1vw;
   padding-bottom:1vw;
-  height:10dvw;
+  height:6dvw;
   gap:2vw;
   }
 
@@ -62,16 +70,41 @@ body {
   gap: 1vw;
 }
 
+@media (orientation: portrait) {
+  #skyTitle {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 6vh;
+  }
+}
+
+
 #skyText {
   display:flex;
   flex-flow: column;
   flex:1;
   align-content:center;
+  font-size: 2.5dvw;
+
+}
+
+#skyText h1 {
+  line-height: 5dvw;
+}
+
+@media (orientation: portrait) {
+  #skyText {
+    font-size: 5dvw;
+  }
+  #skyText h1 {
+    line-height: 10dvw;
+  }
 }
 
 #cuteFoxBoy {
   aspect-ratio: 755/923;
-  max-width: 25%;
+  max-width: 28%;
   height:auto;
   object-fit:cover;
   overflow:visible;
@@ -92,6 +125,7 @@ body {
   height:5dvw;
   color:#FAEFD9;
   text-decoration: none;
+  font-size:3dvw;
 }
 
 #telegramente:hover {
@@ -108,6 +142,7 @@ body {
   height:5dvw;
   color:#FAEFD9;
   text-decoration: none;
+  font-size:3dvw;
 }
 
 #github:hover {
@@ -120,6 +155,27 @@ body {
   width:20%;
   height:60%;
 }
+
+@media (orientation:portrait) {
+  .logos {
+    width:40%
+  }
+  #LinkIcons {
+    gap:10dvw;
+  }
+
+  #telegramente {
+    width:40dvw;
+    height:15dvw;
+    font-size:8dvw;
+  }
+  #github {
+    width:40dvw;
+    height:15dvw;
+    font-size:8dvw;
+  }
+}
+
 #surfaceObjects {
     position:relative;
     display: flex;
@@ -177,8 +233,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#wowzers {
+  background-color: #004cdb;
+}
+
 #glass {
     position: relative;
+    background-color:#fb501f;
 }
 
 #wave {
@@ -247,8 +308,17 @@ body {
   align-content:center;
   background-color: #004cdb;
   padding: 1vw;
-  padding-bottom: 2vh;
+  padding-bottom: 8dvh;
 }
+
+@media (orientation: portrait) {
+  #AboutMeShort {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 
 #sillyfox {
   background-color:#FAEFD9;
@@ -264,15 +334,23 @@ body {
   font-size:2dvw;
 }
 
+@media (orientation: portrait) {
+  #whomst {
+    font-size:4dvw;
+  }
+}
+
+
 #cremeFinish {
   display:flex;
   justify-content:space-around;
   align-content:center;
+  align-items:center;
   background-color: #FAEFD9;
   color:  black;
   padding: 1vw;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
 }
 
 #finalTextBox {
