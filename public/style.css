@@ -96,7 +96,6 @@ body {
 #skyText {
   display:flex;
   flex-flow: column;
-  flex:1;
   align-content:center;
   font-size: 2.5dvw;
 
@@ -118,11 +117,21 @@ body {
 #cuteFoxBoy {
   aspect-ratio: 755/923;
   max-width: 28%;
-  height:auto;
-  object-fit:cover;
-  overflow:visible;
-  flex:1;
-  padding-right:3dvw;
+  width: 28%;          /* add explicit width */
+  height: auto;
+  object-fit: contain; /* use contain, not cover, since you have aspect-ratio set */
+  flex: 0 0 auto;      /* prevent flex from stretching it */
+  align-self: flex-start;
+  padding-right: 3dvw;
+}
+
+@media (orientation: portrait) {
+  #cuteFoxBoy {
+    align-self: auto;  /* lets the parent's align-items: center take over */
+    max-width: 70%;
+    width: 70%;
+    padding-right: 0;
+  }
 }
 
 #LinkIcons {
