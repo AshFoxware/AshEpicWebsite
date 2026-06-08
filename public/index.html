@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  maximum-scale=1.0, user-scalable=no">
     <title>Welcome to the Foxstasy zone!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,19 +49,57 @@
           <div id="centre"></div>
       </div>
     </div>
-      <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190" preserveAspectRatio="xMidYMin slice">
+    <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190" preserveAspectRatio="xMidYMin slice">
+      <defs>
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#004cdb" stop-opacity="0.90" />
+          <stop offset="80%" stop-color="#004cdb" stop-opacity="1" />
+          <stop offset="100%" stop-color="#004cdb" stop-opacity="1" />
+        </linearGradient>
+      </defs>
 
-        <defs>
-          <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#004cdb" stop-opacity="0.90" />
-            <stop offset="80%" stop-color="#004cdb" stop-opacity="1" />
-            <stop offset="100%" stop-color="#004cdb" stop-opacity="1" />
-          </linearGradient>
-        </defs>
-        <path class="waveBack" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
-        <path class="waveMiddle" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z"></path>
-        <path class="waveFront" d="M0 40 Q360 60 720 40 T 1440 40 V190 H0 Z" fill="url(#blueGradient)"></path>
-      </svg>
+      <path class="waveBack" d="M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V190 H0 Z">
+        <animate
+          attributeName="d"
+          dur="5s"
+          repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+          values="
+            M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V190 H0 Z;
+            M0 40 Q144 25 288 40 Q432 55 576 40 Q720 25 864 40 Q1008 55 1152 40 Q1296 25 1440 40 V190 H0 Z;
+            M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V190 H0 Z
+          "/>
+      </path>
+
+      <path class="waveMiddle" d="M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V190 H0 Z">
+        <animate
+          attributeName="d"
+          dur="3s"
+          repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+          values="
+            M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V190 H0 Z;
+            M0 40 Q144 15 288 40 Q432 65 576 40 Q720 15 864 40 Q1008 65 1152 40 Q1296 15 1440 40 V190 H0 Z;
+            M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V190 H0 Z
+          "/>
+      </path>
+
+      <path class="waveFront" d="M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V190 H0 Z" fill="url(#blueGradient)">
+        <animate
+          attributeName="d"
+          dur="2s"
+          repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+          values="
+            M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V190 H0 Z;
+            M0 40 Q144 0 288 40 Q432 80 576 40 Q720 0 864 40 Q1008 80 1152 40 Q1296 0 1440 40 V190 H0 Z;
+            M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V190 H0 Z
+          "/>
+      </path>
+    </svg>
       <div id="AboutMeShort">
         <img id="sillyfox" src="resource/Silly.jpeg" alt="silly fox">
         <div id="whomst">

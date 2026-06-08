@@ -282,40 +282,18 @@ body {
 }
 
 .waveFront {
-    animation: bob 13s ease-in-out infinite alternate, waveFront 2s ease-in-out infinite alternate;
-    d: path("M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V200 H0 Z");
 }
 
-@keyframes waveFront {
-    100% {
-        d: path("M0 40 Q144 0 288 40 Q432 80 576 40 Q720 0 864 40 Q1008 80 1152 40 Q1296 0 1440 40 V200 H0 Z");
-    }
-}
 
 .waveMiddle {
     opacity: 0.6;
     transform: translateY(-0.5vh);
-    animation: bob 15s ease-in-out infinite alternate, waveMiddle 3s ease-in-out infinite alternate;
-    d: path("M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V200 H0 Z");
 }
 
-@keyframes waveMiddle {
-    100% {
-        d: path("M0 40 Q144 15 288 40 Q432 65 576 40 Q720 15 864 40 Q1008 65 1152 40 Q1296 15 1440 40 V200 H0 Z");
-    }
-}
 
 .waveBack {
     opacity: 0.3;
     transform: translateY(-1vh);
-    animation: waveBack 5s ease-in-out infinite alternate;
-    d: path("M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V200 H0 Z");
-}
-
-@keyframes waveBack {
-    100% {
-        d: path("M0 40 Q144 25 288 40 Q432 55 576 40 Q720 25 864 40 Q1008 55 1152 40 Q1296 25 1440 40 V200 H0 Z");
-    }
 }
 
 
