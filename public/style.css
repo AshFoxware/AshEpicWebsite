@@ -128,8 +128,8 @@ body {
 @media (orientation: portrait) {
   #cuteFoxBoy {
     align-self: auto;  /* lets the parent's align-items: center take over */
-    max-width: 70%;
-    width: 70%;
+    max-width: 60%;
+    width: 60%;
     padding-right: 0;
   }
 }
