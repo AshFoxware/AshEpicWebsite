@@ -59,16 +59,21 @@ html, body {
   background: #fb501f;
   opacity: 1;
   z-index: 50;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.5s ease;
 }
 
 /* This class gets added by JavaScript */
-#loadingScreen.fade-out {
+#loadingScreen.fade-in {
   opacity: 0;
   /* Prevents clicks on the invisible screen */
   pointer-events: none;
 }
 
+#loadingScreen.fade-out {
+  opacity: 1;
+  /* Prevents clicks on the invisible screen */
+  pointer-events: none;
+}
 
 #navBar {
   display:flex;
@@ -92,6 +97,7 @@ html, body {
   font-size: clamp(1.25rem, 2.5vw, 2.25rem);
   font-weight:normal;
   transition: font-weight 0.1s ease;
+  text-decoration:none;
 }
 
 .navButtons:hover {
@@ -122,6 +128,28 @@ html, body {
   }
 }
 
+#skyTitle2 {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-content:center;
+  background-color: #fb501f;
+  padding-top:1dvh;
+  padding-bottom:2dvh;
+  padding-left:2dvw;
+  padding-right:2dvw;
+  gap: 1dvw;
+}
+
+@media (orientation: portrait) {
+  #skyTitle2 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    padding-top: 6dvh;
+    padding-bottom: 3dvh;
+  }
+}
 
 #skyText {
   display:flex;
@@ -226,6 +254,10 @@ html, body {
     height:15dvw;
     font-size:8dvw;
   }
+}
+
+#moreButton {
+  color:inherit;
 }
 
 #surfaceObjects {
@@ -450,6 +482,24 @@ html, body {
 
 @media (orientation:portrait) {
   #thirdInfoBox {
+    font-size:3.5dvw;
+  }
+}
+
+#boneSection {
+  align-content:center;
+  align-items:center;
+  background-color: #31171e;
+  color:  #FAEFD9;
+  padding: 2vw;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  max-width:100%;
+  font-size:2dvw;
+}
+
+@media (orientation:portrait) {
+  #boneSection {
     font-size:3.5dvw;
   }
 }

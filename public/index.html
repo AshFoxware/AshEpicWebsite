@@ -11,13 +11,13 @@
   </head>
   <body>
     <div id="loadingScreen">
-      <h1>Loading...</h1>
+      <h1></h1>
     </div>
     <!-- the general structure I want for this site is, Navigation bar -> title/"sky" -> cool water animation -> fancy info show off stuffs -->
     <div id="navBar"> <!-- Navigation bar and buttons-->
-      <a class="navButtons"> Home </a>
+      <div class="navButtons"> Home </div>
       <a class="navButtons"> Projects </a>
-      <a class="navButtons"> Portfolio </a>
+      <a class="navButtons" href="/portfolio"> Portfolio </a>
       <a class="navButtons"> About </a>
     </div>
 
@@ -123,7 +123,8 @@
              <br>
             much of my professional career orients around full-stack development usually on the web, and tool development,
             though with the occassional embedded hardware role. <br><br></p>
-            <p id="moreButton">  </p>
+            <a href="/portfolio" id="moreButton"> more details </a>
+            <br> <br>
         </div>
         <div id="exampleContainer">
         <img id="exampleImage" src="/resource/softexample.webp"> </img>
@@ -150,14 +151,15 @@
         <li> Javascript, Typescript,HTML & CSS </li>
         <li> C, C++, C# </li>
         <li> x86 ASM & SH2 ASM </li>
-        <li> And more!</li>
       </ul>
+      <br>
+      <a id="moreButton" href="/projects"> more details </a>
       <br>
     </div>
   </div>
 
   <div id="footer">
-    <h2> Interested in contacting me? </h1>
+    <h2> Interested in contacting me? </h2>
     <a id="aLinks" href="mailto:ash@lupercalia.software"> email : ash@lupercalia.software</a>
     <a id="aLinks" href="https://www.linkedin.com/in/ash-fantauzzo/"> Linkedin : linkedin.com/in/ash-fantauzzo/</a>
   </div>

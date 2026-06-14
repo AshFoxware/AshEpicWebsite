@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  maximum-scale="1.0", user-scalable="no">
+    <title>Welcome to the code den!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="client.js" defer></script>
+  </head>
+  <body>
+    <div id="loadingScreen">
+      <h1></h1>
+    </div>
+    <!-- the general structure I want for this site is, Navigation bar -> title/"sky" -> cool water animation -> fancy info show off stuffs -->
+    <div id="navBar"> <!-- Navigation bar and buttons-->
+      <a class="navButtons" href="/"> Home </a>
+      <a class="navButtons"> Projects </a>
+      <div class="navButtons"> Portfolio </div>
+      <a class="navButtons"> About </a>
+    </div>
+
+    <div id="skyTitle2" style="width:100%;"> <!-- this is the header and photograph section near the top -->
+      <div id="skyText">
+        <h1 style="font-weight:bold;">Portfolio</h1>
+        <p style="font-weight:350; ">Follow my career journey so far! <br> employer and customer references available upon request.<br>  <br> <br> </p>
+    </div>
+    <div id="LinkIcons" style="flex-direction:column;">
+      <a id="github" href="https://www.linkedin.com/in/ash-fantauzzo/" target="_blank" rel="noopener noreferrer">
+        <svg class="logos"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        </svg>
+        <p>Linkedin</p>
+      </a>
+      <a id="github" href="https://github.com/AshFoxware" target="_blank" rel="noopener noreferrer">
+        <svg class="logos" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+        </svg>
+        <p>Github</p>
+      </a>
+  </div>
+  </div>
+
+    <section id="wowzers" style="width:100%;">
+    <div id="glass"> <!-- I have called it glass because that is what we put water in, and this is the container for the ocean-->
+      <div id="ballContainer">
+        <div id="beachBall">
+          <div id="centre"></div>
+      </div>
+    </div>
+    <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190" preserveAspectRatio="xMidYMin slice">
+      <defs>
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#004cdb" stop-opacity="0.90" />
+          <stop offset="80%" stop-color="#004cdb" stop-opacity="1" />
+          <stop offset="100%" stop-color="#004cdb" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+
+      <path class="waveBack" d="M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V190 H0 Z">
+        <animate
+          attributeName="d"
+          dur="5s"
+          repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+          values="
+            M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V190 H0 Z;
+            M0 40 Q144 25 288 40 Q432 55 576 40 Q720 25 864 40 Q1008 55 1152 40 Q1296 25 1440 40 V190 H0 Z;
+            M0 40 Q144 55 288 40 Q432 25 576 40 Q720 55 864 40 Q1008 25 1152 40 Q1296 55 1440 40 V190 H0 Z
+          "/>
+      </path>
+
+      <path class="waveMiddle" d="M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V190 H0 Z">
+        <animate
+          attributeName="d"
+          dur="3s"
+          repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+          values="
+            M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V190 H0 Z;
+            M0 40 Q144 15 288 40 Q432 65 576 40 Q720 15 864 40 Q1008 65 1152 40 Q1296 15 1440 40 V190 H0 Z;
+            M0 40 Q144 65 288 40 Q432 15 576 40 Q720 65 864 40 Q1008 15 1152 40 Q1296 65 1440 40 V190 H0 Z
+          "/>
+      </path>
+
+      <path class="waveFront" d="M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V190 H0 Z" fill="url(#blueGradient)">
+        <animate
+          attributeName="d"
+          dur="2s"
+          repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+          values="
+            M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V190 H0 Z;
+            M0 40 Q144 0 288 40 Q432 80 576 40 Q720 0 864 40 Q1008 80 1152 40 Q1296 0 1440 40 V190 H0 Z;
+            M0 40 Q144 80 288 40 Q432 0 576 40 Q720 80 864 40 Q1008 0 1152 40 Q1296 80 1440 40 V190 H0 Z
+          "/>
+      </path>
+    </svg>
+      <div id="AboutMeShort">
+        <div id="whomst">
+          <br>
+        <h1> My roles </h1>
+        <h2> Transparency Analytics PTY LTD</h2>
+        <h4> Full-Stack Developer | Nov 2026 - Present </h4>
+        <p> At Transparency Analytics, I serve as a full-stack developer on a SaaS product in the project management space. Day to day, this means developing both the front-end and back-end from UI design and implementation to the server architecture and API development. <br>
+           <br>My role centres on utilizing PostgreSQL, Node.js, React, TypeScript, JavaScript for a significant body of front and back end web and tool development. <br><br> Working within a small team in a contract capacity has meant broad ownership across the product lifecycle, from feature development through to production. <br> </p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+      <div id="secondInfoBox">
+        <div id="TextBox">
+          <h2> Independent Webdev Services </h2>
+          <h3> Sole developer | March 2025 - Sep 2025 </h3>
+          <p>
+            Before joining Transparency Analytics, I ran my own small web development services, taking on clients independently whilst I studied at Victoria University for my Cert IV in Information technology. <br> <br>
+             It involved handling everything from initial builds through to ongoing maintenance and support of existing sites. <br><br>My work spanned front-end design, WordPress development, JavaScript and CSS, and a meaningful amount of server maintenance and systems administration. Clients ultimately retained ownership of their infrastructure post-handoff, with support available as needed.
+             <br> <br>
+             The most impressive part of this era of my life was designing a CRM for a hair salon from scratch using Node.JS, Javascript, and MongoDB/NoSQL.
+      </p>
+        </div>
+      </div>
+
+    <div id="boneSection">
+      <h2> Bone.digital</h2>
+      <h3> Student | April - May 2023 </h3>
+      <p > A brief but useful stint at bone.digital, a web design firm, where I got hands-on with React, WordPress, and JavaScript in a real production context for my work experience.
+        <br> <br>
+        Foundational stuff but it was where I was introduced to a lot of now very familiar concepts and I got my taste for the industry.  </p>
+      <br>
+
+        Prior to this role I had began programming at the age of 12 doing hobbyist projects, I still do this but less so.
+  </div>
+
+  <div id="footer">
+    <h2> Interested in contacting me? </h2>
+    <a id="aLinks" href="mailto:ash@lupercalia.software"> email : ash@lupercalia.software</a>
+    <a id="aLinks" href="https://www.linkedin.com/in/ash-fantauzzo/"> Linkedin : linkedin.com/in/ash-fantauzzo/</a>
+  </div>
+
+
+  </body>
+  </html>
