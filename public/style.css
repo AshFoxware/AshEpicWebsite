@@ -384,6 +384,51 @@ html, body {
 }
 
 
+#ProjContainer2 {
+  position:relative;
+  z-index:30;
+  display:flex;
+  justify-content: space-around;
+  align-content:center;
+  background-color: #004cdb;
+  padding: 2vw;
+  gap: 2vw;
+  padding-bottom: 8dvh;
+  max-width:100%;
+  flex-shrink: 1;
+}
+
+@media (orientation: portrait) {
+  #ProjContainer2 {
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+#ProjContainer3 {
+  position:relative;
+  display:flex;
+  justify-content: space-around;
+  align-content:center;
+  background-color: #FAEFD9;
+  color:black;
+  padding: 2vw;
+  gap: 2vw;
+  padding-bottom: 8dvh;
+  max-width:100%;
+  flex-shrink: 1;
+}
+
+@media (orientation: portrait) {
+  #ProjContainer3 {
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+
 #sillyfox {
   background-color:#FAEFD9;
   max-width:22dvw;
@@ -391,6 +436,42 @@ html, body {
   height:22dvw;
   overflow:hidden;
   border-radius:50%;
+}
+
+#projectScreenies1 {
+  background-color:inherit;
+  width:25dvw;
+  object-fit:scale-down;
+  height:auto;
+  overflow:hidden;
+  border-radius:2.5%;
+}
+
+#projectScreenies2 {
+  background-color:inherit;
+  width:25dvw;
+  object-fit:scale-down;
+  height:auto;
+  overflow:hidden;
+  border-radius:2.5%;
+}
+
+@media (orientation:portrait) {
+  #projectScreenies1 {
+    width:75dvw;
+    object-fit:fit;
+    height:auto;
+    overflow:hidden;
+    border-radius:2.5%;
+  }
+  #projectScreenies2 {
+    background-color:inherit;
+    width:75dvw;
+    object-fit:scale-down;
+    height:auto;
+    overflow:hidden;
+    border-radius:2.5%;
+  }
 }
 
 #whomst {
