@@ -355,7 +355,7 @@ html, body {
 }
 
 
-#cremeFinish {
+#secondInfoBox {
   display:flex;
   flex-shrink: 1;
   justify-content:space-around;
@@ -363,37 +363,89 @@ html, body {
   align-items:center;
   background-color: #FAEFD9;
   color:  black;
-  padding: 1vw;
+  padding: 2vw;
   padding-top: 8vh;
   padding-bottom: 8vh;
   max-width:100%;
 }
 
-#finalTextBox {
+@media (orientation:portrait) {
+  #secondInfoBox {
+  flex-direction:column;
+}
+}
+
+#TextBox {
   align-content: center;
   font-size:2dvw;
   flex-shrink: 1;
 }
 
 @media (orientation: portrait) {
-  #finalTextBox {
+  #TextBox {
     font-size:4dvw;
   }
 }
 
-#eeping {
+#exampleContainer {
+  display:flex;
+  flex-direction:column;
+  flex-shrink:1;
+  font-size:1dvw;
+}
+
+@media (orientation:portrait) {
+  #exampleContainer {
+    flex-direction:column;
+    font-size:3dvw;
+  }
+}
+
+#exampleImage {
   background-color:#FAEFD9;
   max-width:25dvw;
   object-fit:cover;
   height:auto;
   overflow:hidden;
-  border-radius:50%;
+  border-radius:1%;
   flex-shrink: 1;
 }
 
-#feeter {
+@media (orientation:portrait) {
+  #exampleImage {
+    max-width: 75dvw;
+  }
+}
+
+#thirdInfoBox {
+  padding:3dvw;
+  display:flex;
   width:100%;
-  font-size: 2.5dvw;
+  font-size:2dvw;
   background-color:#31171e;
   color: #FAEFD9;
+  flex-shrink:1;
+}
+
+@media (orientation:portrait) {
+  #thirdInfoBox {
+    font-size:3.5dvw;
+  }
+}
+
+#footer {
+  display:flex;
+  flex-direction:column;
+  background-color:black;
+  width:100%;
+  font-size:2dvv;
+  padding:2dvw;
+}
+
+#aLinks {
+  color:inherit;
+}
+
+#aLinks:hover {
+  cursor:pointer;
 }
