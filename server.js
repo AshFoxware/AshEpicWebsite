@@ -29,6 +29,20 @@ const server = http.createServer(async (req, res) => {
       });
       return;
   }
+
+  if (req.url === '/projects' && req.method === 'GET') {
+      fs.readFile('./public/projects.html', (err, content) => {
+          if (err) {
+              res.writeHead(404);
+              res.end('404 Not Found');
+              return;
+          }
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(content, 'utf-8');
+      });
+      return;
+  }
+
     // Default route
     let filePath = req.url === '/'
         ? './public/index.html'
