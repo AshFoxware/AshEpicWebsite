@@ -17,6 +17,9 @@ const mimeTypes = {
 };
 
 const server = http.createServer(async (req, res) => {
+    if(req.url === "/portfolio") {
+
+    }
     // Default route
     let filePath = req.url === '/'
         ? './public/index.html'
